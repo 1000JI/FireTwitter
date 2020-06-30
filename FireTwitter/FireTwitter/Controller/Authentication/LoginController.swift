@@ -43,6 +43,24 @@ class LoginController: UIViewController {
         return tf
     }()
     
+    private lazy var loginButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Log In", for: .normal)
+        button.setTitleColor(.twitterBlue, for: .normal)
+        button.backgroundColor = .white
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.layer.cornerRadius = 5
+        button.titleLabel?.font = .boldSystemFont(ofSize: 20)
+        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var dontHaveAccountButton: UIButton = {
+        let button = Utilities().attributedButton("Don't have an account", " Sign Up")
+        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+        return button
+    }()
+    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
@@ -51,6 +69,14 @@ class LoginController: UIViewController {
     }
     
     // MARK: - Selectors
+    
+    @objc func handleShowSignUp() {
+        print("DEBUG: handleShowSignUp")
+    }
+    
+    @objc func handleLogin() {
+        print("DEBUG: handleLogin")
+    }
     
     // MARK: - Helpers
     
@@ -64,13 +90,18 @@ class LoginController: UIViewController {
         logoImageView.setDimensions(width: 150, height: 150)
         logoImageView.layer.cornerRadius = 150 / 2
         
-        let stack = UIStackView(arrangedSubviews: [emailContrainerView, passwordContrainerView])
+        let stack = UIStackView(arrangedSubviews: [emailContrainerView, passwordContrainerView, loginButton])
         stack.axis = .vertical
-        stack.spacing = 8
+        stack.spacing = 20
+        stack.distribution = .fillEqually
         
         view.addSubview(stack)
         stack.anchor(top: logoImageView.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor,
-                     paddingLeading: 16, paddingTrailing: 16)
+                     paddingLeading: 32, paddingTrailing: 32)
+        
+        view.addSubview(dontHaveAccountButton)
+        dontHaveAccountButton.anchor(leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                                     trailing: view.trailingAnchor, paddingLeading: 40, paddingBottom: 16, paddingTrailing: 40)
     }
     
 }
