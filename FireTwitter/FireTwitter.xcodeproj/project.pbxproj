@@ -13,6 +13,8 @@
 		AF603F2324AAD4230040271B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF603F2124AAD4230040271B /* Main.storyboard */; };
 		AF603F2524AAD4250040271B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF603F2424AAD4250040271B /* Assets.xcassets */; };
 		AF603F2824AAD4250040271B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF603F2624AAD4250040271B /* LaunchScreen.storyboard */; };
+		AF603F3024AAD7600040271B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F2F24AAD7600040271B /* Extensions.swift */; };
+		AF603F4024AAD9710040271B /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F3F24AAD9710040271B /* MainTabController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		AF603F2424AAD4250040271B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF603F2724AAD4250040271B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF603F2924AAD4250040271B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF603F2F24AAD7600040271B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AF603F3F24AAD9710040271B /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,65 @@
 		AF603F1A24AAD4230040271B /* FireTwitter */ = {
 			isa = PBXGroup;
 			children = (
+				AF603F3B24AAD89F0040271B /* Model */,
+				AF603F3A24AAD89E0040271B /* View */,
+				AF603F3924AAD89D0040271B /* ViewModel */,
+				AF603F3824AAD89C0040271B /* Controller */,
+				AF603F3724AAD8980040271B /* API */,
+				AF603F3124AAD84F0040271B /* Utils */,
 				AF603F1B24AAD4230040271B /* AppDelegate.swift */,
 				AF603F1D24AAD4230040271B /* SceneDelegate.swift */,
 				AF603F1F24AAD4230040271B /* ViewController.swift */,
 				AF603F2124AAD4230040271B /* Main.storyboard */,
 				AF603F2424AAD4250040271B /* Assets.xcassets */,
+				AF603F2F24AAD7600040271B /* Extensions.swift */,
 				AF603F2624AAD4250040271B /* LaunchScreen.storyboard */,
 				AF603F2924AAD4250040271B /* Info.plist */,
 			);
 			path = FireTwitter;
+			sourceTree = "<group>";
+		};
+		AF603F3124AAD84F0040271B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AF603F3724AAD8980040271B /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AF603F3824AAD89C0040271B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF603F3F24AAD9710040271B /* MainTabController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AF603F3924AAD89D0040271B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AF603F3A24AAD89E0040271B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF603F3B24AAD89F0040271B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +194,9 @@
 			files = (
 				AF603F2024AAD4230040271B /* ViewController.swift in Sources */,
 				AF603F1C24AAD4230040271B /* AppDelegate.swift in Sources */,
+				AF603F4024AAD9710040271B /* MainTabController.swift in Sources */,
 				AF603F1E24AAD4230040271B /* SceneDelegate.swift in Sources */,
+				AF603F3024AAD7600040271B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
