@@ -19,6 +19,8 @@
 		AF603F4424AB44F10040271B /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F4324AB44F10040271B /* ExploreController.swift */; };
 		AF603F4624AB45330040271B /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F4524AB45330040271B /* NotificationsController.swift */; };
 		AF603F4824AB45510040271B /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F4724AB45510040271B /* ConversationsController.swift */; };
+		AF603F4B24AB657D0040271B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F4A24AB657D0040271B /* LoginController.swift */; };
+		AF603F4D24AB661C0040271B /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F4C24AB661C0040271B /* RegistrationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		AF603F4324AB44F10040271B /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
 		AF603F4524AB45330040271B /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		AF603F4724AB45510040271B /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
+		AF603F4A24AB657D0040271B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		AF603F4C24AB661C0040271B /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		AF603F3824AAD89C0040271B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AF603F4924AB654B0040271B /* Authentication */,
 				AF603F3F24AAD9710040271B /* MainTabController.swift */,
 				AF603F4124AB44530040271B /* FeedController.swift */,
 				AF603F4324AB44F10040271B /* ExploreController.swift */,
@@ -131,6 +136,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AF603F4924AB654B0040271B /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				AF603F4A24AB657D0040271B /* LoginController.swift */,
+				AF603F4C24AB661C0040271B /* RegistrationController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,9 +224,11 @@
 				AF603F1C24AAD4230040271B /* AppDelegate.swift in Sources */,
 				AF603F4024AAD9710040271B /* MainTabController.swift in Sources */,
 				AF603F1E24AAD4230040271B /* SceneDelegate.swift in Sources */,
+				AF603F4D24AB661C0040271B /* RegistrationController.swift in Sources */,
 				AF603F4624AB45330040271B /* NotificationsController.swift in Sources */,
 				AF603F4824AB45510040271B /* ConversationsController.swift in Sources */,
 				AF603F3024AAD7600040271B /* Extensions.swift in Sources */,
+				AF603F4B24AB657D0040271B /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
