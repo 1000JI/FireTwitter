@@ -21,35 +21,26 @@ class LoginController: UIViewController {
     }()
     
     private lazy var emailContrainerView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .red
-        view.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
-        let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "mail")
-        
-        view.addSubview(iv)
-        iv.anchor(leading: view.leadingAnchor, bottom: view.bottomAnchor,
-                  paddingLeading: 8, paddingBottom: 8)
-        iv.setDimensions(width: 24, height: 24)
-        
+        let image = #imageLiteral(resourceName: "ic_mail_outline_white_2x-1")
+        let view = Utilities().inputContrainerView(withImage: image, textField: emailTextField)
         return view
     }()
     
     private lazy var passwordContrainerView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .systemPurple
-        view.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
-        let iv = UIImageView()
-        iv.image = #imageLiteral(resourceName: "ic_lock_outline_white_2x")
-        
-        view.addSubview(iv)
-        iv.anchor(leading: view.leadingAnchor, bottom: view.bottomAnchor,
-                  paddingLeading: 8, paddingBottom: 8)
-        iv.setDimensions(width: 24, height: 24)
-        
+        let image = #imageLiteral(resourceName: "ic_lock_outline_white_2x")
+        let view = Utilities().inputContrainerView(withImage: image, textField: passwordTextField)
         return view
+    }()
+    
+    private let emailTextField: UITextField = {
+        let tf = Utilities().textField(withPlaceholder: "Email")
+        return tf
+    }()
+    
+    private let passwordTextField: UITextField = {
+        let tf = Utilities().textField(withPlaceholder: "Password")
+        tf.isSecureTextEntry = true
+        return tf
     }()
     
     // MARK: - LifeCycle
@@ -78,7 +69,8 @@ class LoginController: UIViewController {
         stack.spacing = 8
         
         view.addSubview(stack)
-        stack.anchor(top: logoImageView.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor)
+        stack.anchor(top: logoImageView.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor,
+                     paddingLeading: 16, paddingTrailing: 16)
     }
     
 }
