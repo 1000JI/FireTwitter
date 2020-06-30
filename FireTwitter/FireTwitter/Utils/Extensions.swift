@@ -10,13 +10,13 @@ import UIKit
 
 extension UIView {
     func anchor(top: NSLayoutYAxisAnchor? = nil,
-                left: NSLayoutXAxisAnchor? = nil,
+                leading: NSLayoutXAxisAnchor? = nil,
                 bottom: NSLayoutYAxisAnchor? = nil,
-                right: NSLayoutXAxisAnchor? = nil,
+                trailing: NSLayoutXAxisAnchor? = nil,
                 paddingTop: CGFloat = 0,
-                paddingLeft: CGFloat = 0,
+                paddingLeading: CGFloat = 0,
                 paddingBottom: CGFloat = 0,
-                paddingRight: CGFloat = 0,
+                paddingTrailing: CGFloat = 0,
                 width: CGFloat? = nil,
                 height: CGFloat? = nil) {
         
@@ -26,16 +26,16 @@ extension UIView {
             topAnchor.constraint(equalTo: top, constant: paddingTop).isActive = true
         }
         
-        if let left = left {
-            leftAnchor.constraint(equalTo: left, constant: paddingLeft).isActive = true
+        if let leading = leading {
+            leadingAnchor.constraint(equalTo: leading, constant: paddingLeading).isActive = true
         }
         
         if let bottom = bottom {
             bottomAnchor.constraint(equalTo: bottom, constant: -paddingBottom).isActive = true
         }
         
-        if let right = right {
-            rightAnchor.constraint(equalTo: right, constant: -paddingRight).isActive = true
+        if let trailing = trailing {
+            trailingAnchor.constraint(equalTo: trailing, constant: -paddingTrailing).isActive = true
         }
         
         if let width = width {
@@ -62,13 +62,13 @@ extension UIView {
         }
     }
     
-    func centerY(inView view: UIView, leftAnchor: NSLayoutXAxisAnchor? = nil, paddingLeft: CGFloat? = nil, constant: CGFloat? = 0) {
+    func centerY(inView view: UIView, leadingAnchor: NSLayoutXAxisAnchor? = nil, paddingLeading: CGFloat? = nil, constant: CGFloat? = 0) {
         translatesAutoresizingMaskIntoConstraints = false
         
         centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: constant!).isActive = true
         
-        if let leftAnchor = leftAnchor, let padding = paddingLeft {
-            self.leftAnchor.constraint(equalTo: leftAnchor, constant: padding).isActive = true
+        if let leadingAnchor = leadingAnchor, let padding = paddingLeading {
+            self.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding).isActive = true
         }
     }
     
@@ -80,8 +80,8 @@ extension UIView {
     
     func addConstraintsToFillView(_ view: UIView) {
         translatesAutoresizingMaskIntoConstraints = false
-        anchor(top: view.topAnchor, left: view.leftAnchor,
-               bottom: view.bottomAnchor, right: view.rightAnchor)
+        anchor(top: view.topAnchor, leading: view.leadingAnchor,
+               bottom: view.bottomAnchor, trailing: view.trailingAnchor)
     }
 }
 

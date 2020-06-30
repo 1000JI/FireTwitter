@@ -79,7 +79,6 @@
 				AF603F1F24AAD4230040271B /* ViewController.swift */,
 				AF603F2124AAD4230040271B /* Main.storyboard */,
 				AF603F2424AAD4250040271B /* Assets.xcassets */,
-				AF603F2F24AAD7600040271B /* Extensions.swift */,
 				AF603F2624AAD4250040271B /* LaunchScreen.storyboard */,
 				AF603F2924AAD4250040271B /* Info.plist */,
 			);
@@ -89,6 +88,7 @@
 		AF603F3124AAD84F0040271B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AF603F2F24AAD7600040271B /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
