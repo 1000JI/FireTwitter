@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class RegistrationController: UIViewController {
     
     // MARK: - Properties
     
     private let imagePicker = UIImagePickerController()
+    private var profileImage: UIImage?
     
     private lazy var plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
@@ -53,6 +55,7 @@ class RegistrationController: UIViewController {
     
     private let passwordTextField: UITextField = {
         let tf = Utilities().textField(withPlaceholder: "Password")
+        tf.isSecureTextEntry = true
         return tf
     }()
     
@@ -94,7 +97,29 @@ class RegistrationController: UIViewController {
     // MARK: - Selectors
     
     @objc func handleRegistration() {
+        guard let profileImage = profileImage else {
+            print("DEBUG: Please select a profile image..")
+            return
+        }
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        guard let fullname = fullnameTextField.text else { return }
+        guard let username = usernameTextField.text else { return }
         
+        let credentials = AuthCredentials(
+            email: email,
+            password: password,
+            fullname: fullname,
+            username: username,
+            profileImage: profileImage)
+        
+        AuthService.shared.registerUser(credentials: credentials) { (error, refer) in
+            guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else { return }
+            guard let controller = window.rootViewController as? MainTabController else { return }
+            controller.authenticateUserAndConfigureUI()
+            
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     @objc func handleShowLogin() {
@@ -134,7 +159,7 @@ class RegistrationController: UIViewController {
         
         view.addSubview(alreadyHaveAccountButton)
         alreadyHaveAccountButton.anchor(leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor,
-                                     trailing: view.trailingAnchor, paddingLeading: 40, paddingBottom: 16, paddingTrailing: 40)
+                                        trailing: view.trailingAnchor, paddingLeading: 40, paddingBottom: 16, paddingTrailing: 40)
     }
     
 }
@@ -144,6 +169,7 @@ class RegistrationController: UIViewController {
 extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let profileImage = info[.editedImage] as? UIImage else { return }
+        self.profileImage = profileImage
         
         plusPhotoButton.layer.cornerRadius = 128 / 2
         plusPhotoButton.layer.masksToBounds = true
