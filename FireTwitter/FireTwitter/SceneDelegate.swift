@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         FirebaseApp.configure()
         
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = UINavigationController(rootViewController: LoginController())
+        window?.rootViewController = MainTabController()
         window?.makeKeyAndVisible()
     }
 }
