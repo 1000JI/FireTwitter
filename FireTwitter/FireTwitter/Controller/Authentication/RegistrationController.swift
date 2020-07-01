@@ -14,6 +14,7 @@ class RegistrationController: UIViewController {
     // MARK: - Properties
     
     private let imagePicker = UIImagePickerController()
+    private var profileImage: UIImage?
     
     private lazy var plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
@@ -96,6 +97,10 @@ class RegistrationController: UIViewController {
     // MARK: - Selectors
     
     @objc func handleRegistration() {
+        guard let profileImage = profileImage else {
+            print("DEBUG: Please select a profile image..")
+            return
+        }
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         guard let fullname = fullnameTextField.text else { return }
@@ -106,7 +111,15 @@ class RegistrationController: UIViewController {
                 print("DEBUG: Registration Error is ", error.localizedDescription)
             }
             
-            print("DEBUG: Successfully registered user")
+            guard let uid = result?.user.uid else { return }
+            
+            let values = ["email": email,
+                          "username": username,
+                          "fullname": fullname]
+            let ref = Database.database().reference().child("users").child(uid)
+            ref.updateChildValues(values) { (error, ref) in
+                print("DEBUG: Successfully updated user information..")
+            }
         }
     }
     
@@ -157,6 +170,7 @@ class RegistrationController: UIViewController {
 extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let profileImage = info[.editedImage] as? UIImage else { return }
+        self.profileImage = profileImage
         
         plusPhotoButton.layer.cornerRadius = 128 / 2
         plusPhotoButton.layer.masksToBounds = true
