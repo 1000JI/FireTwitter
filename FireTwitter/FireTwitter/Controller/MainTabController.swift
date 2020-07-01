@@ -13,6 +13,17 @@ class MainTabController: UITabBarController {
     
     // MARK: - Properties
     
+    var user: User? {
+        didSet {
+            // TabBarController에 등록되어있는 viewControllers 중 0번째 index를 가져오되, UINavigationController 여야함
+            guard let nav = viewControllers?.first as? UINavigationController else { return }
+            // 가져온게 성공했다면 해당 viewcontroller에서 첫번째의 뷰가 FeedController면 가져옴
+            guard let feed = nav.viewControllers.first as? FeedController else { return }
+            
+            feed.user = user
+        }
+    }
+    
     lazy var actionButton: UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .white
@@ -34,6 +45,12 @@ class MainTabController: UITabBarController {
     
     // MARK: - API
     
+    func fetchUser() {
+        UserService.shared.fetchUser { user in
+            self.user = user
+        }
+    }
+    
     func authenticateUserAndConfigureUI() {
         if Auth.auth().currentUser == nil {
             DispatchQueue.main.async {
@@ -44,6 +61,7 @@ class MainTabController: UITabBarController {
         } else {
             configureViewControllers()
             configureUI()
+            fetchUser()
         }
     }
     
