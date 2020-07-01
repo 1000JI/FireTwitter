@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF5A6B6424ACBEA1009AC992 /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5A6B6324ACBEA1009AC992 /* CaptionTextView.swift */; };
+		AF5A6B6624ACD8DB009AC992 /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5A6B6524ACD8DB009AC992 /* TweetService.swift */; };
 		AF603F1C24AAD4230040271B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F1B24AAD4230040271B /* AppDelegate.swift */; };
 		AF603F1E24AAD4230040271B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F1D24AAD4230040271B /* SceneDelegate.swift */; };
 		AF603F2024AAD4230040271B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F1F24AAD4230040271B /* ViewController.swift */; };
@@ -22,6 +24,7 @@
 		AF603F4B24AB657D0040271B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F4A24AB657D0040271B /* LoginController.swift */; };
 		AF603F4D24AB661C0040271B /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F4C24AB661C0040271B /* RegistrationController.swift */; };
 		AF603F5124AB70710040271B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F5024AB70710040271B /* Utilities.swift */; };
+		AF85EEA624AC7C940006EFE7 /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF85EEA524AC7C940006EFE7 /* UploadTweetController.swift */; };
 		AF89321624AC279400D3BA2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF89321524AC279400D3BA2A /* GoogleService-Info.plist */; };
 		AF89321824AC3E9B00D3BA2A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89321724AC3E9B00D3BA2A /* Constants.swift */; };
 		AF89321A24AC481900D3BA2A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89321924AC481900D3BA2A /* AuthService.swift */; };
@@ -34,6 +37,8 @@
 		7042F107A4CBE90E0FEFD182 /* Pods-FireTwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireTwitter.debug.xcconfig"; path = "Target Support Files/Pods-FireTwitter/Pods-FireTwitter.debug.xcconfig"; sourceTree = "<group>"; };
 		785385113B20C1A04DCC148A /* Pods-FireTwitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireTwitter.release.xcconfig"; path = "Target Support Files/Pods-FireTwitter/Pods-FireTwitter.release.xcconfig"; sourceTree = "<group>"; };
 		A77B6F163783A298DEDD31F3 /* Pods_FireTwitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireTwitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5A6B6324ACBEA1009AC992 /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
+		AF5A6B6524ACD8DB009AC992 /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		AF603F1824AAD4230040271B /* FireTwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireTwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF603F1B24AAD4230040271B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF603F1D24AAD4230040271B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +56,7 @@
 		AF603F4A24AB657D0040271B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		AF603F4C24AB661C0040271B /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		AF603F5024AB70710040271B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		AF85EEA524AC7C940006EFE7 /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
 		AF89321524AC279400D3BA2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AF89321724AC3E9B00D3BA2A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AF89321924AC481900D3BA2A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 			children = (
 				AF89321924AC481900D3BA2A /* AuthService.swift */,
 				AF89321B24AC58E600D3BA2A /* UserService.swift */,
+				AF5A6B6524ACD8DB009AC992 /* TweetService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -146,6 +153,7 @@
 				AF603F4324AB44F10040271B /* ExploreController.swift */,
 				AF603F4524AB45330040271B /* NotificationsController.swift */,
 				AF603F4724AB45510040271B /* ConversationsController.swift */,
+				AF85EEA524AC7C940006EFE7 /* UploadTweetController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -160,6 +168,7 @@
 		AF603F3A24AAD89E0040271B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF5A6B6324ACBEA1009AC992 /* CaptionTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -306,10 +315,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF603F2024AAD4230040271B /* ViewController.swift in Sources */,
+				AF5A6B6624ACD8DB009AC992 /* TweetService.swift in Sources */,
 				AF603F4224AB44530040271B /* FeedController.swift in Sources */,
 				AF603F4424AB44F10040271B /* ExploreController.swift in Sources */,
 				AF603F1C24AAD4230040271B /* AppDelegate.swift in Sources */,
+				AF85EEA624AC7C940006EFE7 /* UploadTweetController.swift in Sources */,
 				AF89321E24AC5BF200D3BA2A /* User.swift in Sources */,
+				AF5A6B6424ACBEA1009AC992 /* CaptionTextView.swift in Sources */,
 				AF603F4024AAD9710040271B /* MainTabController.swift in Sources */,
 				AF603F1E24AAD4230040271B /* SceneDelegate.swift in Sources */,
 				AF603F5124AB70710040271B /* Utilities.swift in Sources */,
