@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		AF603F4D24AB661C0040271B /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F4C24AB661C0040271B /* RegistrationController.swift */; };
 		AF603F5124AB70710040271B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F5024AB70710040271B /* Utilities.swift */; };
 		AF89321624AC279400D3BA2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF89321524AC279400D3BA2A /* GoogleService-Info.plist */; };
+		AF89321824AC3E9B00D3BA2A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89321724AC3E9B00D3BA2A /* Constants.swift */; };
 		EAE8A17294F18CB9AB8FEBAC /* Pods_FireTwitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77B6F163783A298DEDD31F3 /* Pods_FireTwitter.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		AF603F4C24AB661C0040271B /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		AF603F5024AB70710040271B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		AF89321524AC279400D3BA2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		AF89321724AC3E9B00D3BA2A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,6 @@
 				7042F107A4CBE90E0FEFD182 /* Pods-FireTwitter.debug.xcconfig */,
 				785385113B20C1A04DCC148A /* Pods-FireTwitter.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -116,6 +117,7 @@
 			children = (
 				AF603F2F24AAD7600040271B /* Extensions.swift */,
 				AF603F5024AB70710040271B /* Utilities.swift */,
+				AF89321724AC3E9B00D3BA2A /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -301,6 +303,7 @@
 				AF603F4024AAD9710040271B /* MainTabController.swift in Sources */,
 				AF603F1E24AAD4230040271B /* SceneDelegate.swift in Sources */,
 				AF603F5124AB70710040271B /* Utilities.swift in Sources */,
+				AF89321824AC3E9B00D3BA2A /* Constants.swift in Sources */,
 				AF603F4D24AB661C0040271B /* RegistrationController.swift in Sources */,
 				AF603F4624AB45330040271B /* NotificationsController.swift in Sources */,
 				AF603F4824AB45510040271B /* ConversationsController.swift in Sources */,
