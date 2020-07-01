@@ -24,6 +24,7 @@
 		AF603F5124AB70710040271B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F5024AB70710040271B /* Utilities.swift */; };
 		AF89321624AC279400D3BA2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF89321524AC279400D3BA2A /* GoogleService-Info.plist */; };
 		AF89321824AC3E9B00D3BA2A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89321724AC3E9B00D3BA2A /* Constants.swift */; };
+		AF89321A24AC481900D3BA2A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89321924AC481900D3BA2A /* AuthService.swift */; };
 		EAE8A17294F18CB9AB8FEBAC /* Pods_FireTwitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77B6F163783A298DEDD31F3 /* Pods_FireTwitter.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		AF603F5024AB70710040271B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		AF89321524AC279400D3BA2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AF89321724AC3E9B00D3BA2A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AF89321924AC481900D3BA2A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		AF603F3724AAD8980040271B /* API */ = {
 			isa = PBXGroup;
 			children = (
+				AF89321924AC481900D3BA2A /* AuthService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				AF603F4824AB45510040271B /* ConversationsController.swift in Sources */,
 				AF603F3024AAD7600040271B /* Extensions.swift in Sources */,
 				AF603F4B24AB657D0040271B /* LoginController.swift in Sources */,
+				AF89321A24AC481900D3BA2A /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
