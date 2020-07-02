@@ -19,7 +19,9 @@ class FeedController: UICollectionViewController {
         didSet { configureLeftBarButton() }
     }
     
-    var tweets = [Tweet]()
+    private var tweets = [Tweet]() {
+        didSet { collectionView.reloadData() }
+    }
     
     // MARK: - LifeCycle
     
@@ -35,7 +37,6 @@ class FeedController: UICollectionViewController {
     func fetchTweets() {
         TweetService.shared.fetchTweets { tweets in
             self.tweets = tweets
-            self.collectionView.reloadData()
         }
     }
     
