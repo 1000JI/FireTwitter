@@ -12,9 +12,7 @@ struct UserService {
     static let shared = UserService()
     private init() { }
     
-    func fetchUser(completion: @escaping(User) -> Void) {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        
+    func fetchUser(uid: String, completion: @escaping(User) -> Void) {
         /*
          * 값 이벤트 수신 대기
             - 경로의 데이터를 읽고 변경사항을 수신 대기 하려면 observeSingleEvent 메서드의 이벤트를 관찰한다.

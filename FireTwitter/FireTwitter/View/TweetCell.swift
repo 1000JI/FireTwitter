@@ -144,7 +144,8 @@ class TweetCell: UICollectionViewCell {
     
     func configure() {
         guard let tweet = tweet else { return }
-        
+        profileImageView.sd_setImage(with: tweet.user.profileImageUrl, completed: nil)
+        infoLabel.text = "\(tweet.user.fullname) @\(tweet.user.username)"
         captionLabel.text = tweet.caption
         
     }
