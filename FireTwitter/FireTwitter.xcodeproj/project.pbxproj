@@ -33,6 +33,7 @@
 		AF89321A24AC481900D3BA2A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89321924AC481900D3BA2A /* AuthService.swift */; };
 		AF89321C24AC58E600D3BA2A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89321B24AC58E600D3BA2A /* UserService.swift */; };
 		AF89321E24AC5BF200D3BA2A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89321D24AC5BF200D3BA2A /* User.swift */; };
+		AF9E75A524AECBB00021CBE7 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E75A424AECBB00021CBE7 /* ProfileController.swift */; };
 		EAE8A17294F18CB9AB8FEBAC /* Pods_FireTwitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77B6F163783A298DEDD31F3 /* Pods_FireTwitter.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		AF89321924AC481900D3BA2A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		AF89321B24AC58E600D3BA2A /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		AF89321D24AC5BF200D3BA2A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AF9E75A424AECBB00021CBE7 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				AF603F4524AB45330040271B /* NotificationsController.swift */,
 				AF603F4724AB45510040271B /* ConversationsController.swift */,
 				AF85EEA524AC7C940006EFE7 /* UploadTweetController.swift */,
+				AF9E75A424AECBB00021CBE7 /* ProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				AF89321E24AC5BF200D3BA2A /* User.swift in Sources */,
 				AF5A6B6424ACBEA1009AC992 /* CaptionTextView.swift in Sources */,
 				AF603F4024AAD9710040271B /* MainTabController.swift in Sources */,
+				AF9E75A524AECBB00021CBE7 /* ProfileController.swift in Sources */,
 				AF603F1E24AAD4230040271B /* SceneDelegate.swift in Sources */,
 				AF603F5124AB70710040271B /* Utilities.swift in Sources */,
 				AF5A6B6824ACDEE6009AC992 /* Tweet.swift in Sources */,
