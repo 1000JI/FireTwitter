@@ -14,7 +14,7 @@ private let headerIdentifier = "ProfileHeader"
 class ProfileController: UICollectionViewController {
     
     // MARK: - Properties
-    
+     
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
@@ -26,6 +26,7 @@ class ProfileController: UICollectionViewController {
         super.viewWillAppear(animated)
         
         navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.barStyle = .black
     }
     
     // MARK: - Helpers
