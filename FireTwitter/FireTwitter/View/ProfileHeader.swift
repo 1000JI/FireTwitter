@@ -12,6 +12,8 @@ class ProfileHeader: UICollectionReusableView {
     
     // MARK: - Properties
     
+    private let filterBar = ProfileFilterView()
+    
     private lazy var containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .twitterBlue
@@ -108,6 +110,9 @@ class ProfileHeader: UICollectionReusableView {
         addSubview(userDetailsStack)
         userDetailsStack.anchor(top: profileImageView.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor,
                                 paddingTop: 8, paddingLeading: 12, paddingTrailing: 12)
+        
+        addSubview(filterBar)
+        filterBar.anchor(leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, height: 50)
     }
     
     required init?(coder: NSCoder) {
