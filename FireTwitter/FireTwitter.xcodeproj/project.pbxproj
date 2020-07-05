@@ -78,7 +78,6 @@
 		AF89321B24AC58E600D3BA2A /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		AF89321D24AC5BF200D3BA2A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF9DFDB724B1C83E007E47C1 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
-		AF9DFDB924B2423C007E47C1 /* FireTwitter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FireTwitter.entitlements; sourceTree = "<group>"; };
 		AF9E75A424AECBB00021CBE7 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		AF9E75A824AED4B50021CBE7 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,7 +124,6 @@
 		AF603F1A24AAD4230040271B /* FireTwitter */ = {
 			isa = PBXGroup;
 			children = (
-				AF9DFDB924B2423C007E47C1 /* FireTwitter.entitlements */,
 				AF603F3B24AAD89F0040271B /* Model */,
 				AF603F3A24AAD89E0040271B /* View */,
 				AF603F3924AAD89D0040271B /* ViewModel */,
