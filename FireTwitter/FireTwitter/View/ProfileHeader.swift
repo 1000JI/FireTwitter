@@ -66,21 +66,19 @@ class ProfileHeader: UICollectionReusableView {
     private let fullnameLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 20)
-        label.text = "JIWOON CHEON"
         return label
     }()
     
     private let usernameLabel: UILabel = {
         let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 16)
+        label.font = .systemFont(ofSize: 16)
         label.textColor = .lightGray
-        label.text = "@1000ji"
         return label
     }()
     
     private let bioLabel: UILabel = {
         let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 16)
+        label.font = .systemFont(ofSize: 16)
         label.numberOfLines = 3
         label.text = "This is a user bio that will span more than one line for test purposes"
         return label
@@ -199,6 +197,9 @@ class ProfileHeader: UICollectionReusableView {
         editProfileFollowButton.setTitle(viewModel.actionButtonTitle, for: .normal)
         followersLabel.attributedText = viewModel.followersString
         followingLabel.attributedText = viewModel.followingString
+        
+        fullnameLabel.text = user.fullname
+        usernameLabel.text = viewModel.usernameText
     }
     
 }
