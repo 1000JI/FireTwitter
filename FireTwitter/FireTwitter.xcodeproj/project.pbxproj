@@ -36,6 +36,7 @@
 		AF89321A24AC481900D3BA2A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89321924AC481900D3BA2A /* AuthService.swift */; };
 		AF89321C24AC58E600D3BA2A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89321B24AC58E600D3BA2A /* UserService.swift */; };
 		AF89321E24AC5BF200D3BA2A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89321D24AC5BF200D3BA2A /* User.swift */; };
+		AF9DFDB824B1C83E007E47C1 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9DFDB724B1C83E007E47C1 /* UserCell.swift */; };
 		AF9E75A524AECBB00021CBE7 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E75A424AECBB00021CBE7 /* ProfileController.swift */; };
 		AF9E75A924AED4B50021CBE7 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E75A824AED4B50021CBE7 /* ProfileHeader.swift */; };
 		EAE8A17294F18CB9AB8FEBAC /* Pods_FireTwitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77B6F163783A298DEDD31F3 /* Pods_FireTwitter.framework */; };
@@ -76,6 +77,7 @@
 		AF89321924AC481900D3BA2A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		AF89321B24AC58E600D3BA2A /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		AF89321D24AC5BF200D3BA2A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AF9DFDB724B1C83E007E47C1 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		AF9E75A424AECBB00021CBE7 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		AF9E75A824AED4B50021CBE7 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +194,7 @@
 				AF9E75A824AED4B50021CBE7 /* ProfileHeader.swift */,
 				AF32124124B0798700FD942D /* ProfileFilterView.swift */,
 				AF32124324B07C5B00FD942D /* ProfileFilterCell.swift */,
+				AF9DFDB724B1C83E007E47C1 /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				AF4CFF8E24AD72C100DE2747 /* TweetViewModel.swift in Sources */,
 				AF89321824AC3E9B00D3BA2A /* Constants.swift in Sources */,
 				AF603F4D24AB661C0040271B /* RegistrationController.swift in Sources */,
+				AF9DFDB824B1C83E007E47C1 /* UserCell.swift in Sources */,
 				AF603F4624AB45330040271B /* NotificationsController.swift in Sources */,
 				AF5A6B6A24ACE6CD009AC992 /* TweetCell.swift in Sources */,
 				AF603F4824AB45510040271B /* ConversationsController.swift in Sources */,
@@ -509,6 +513,8 @@
 			baseConfigurationReference = 7042F107A4CBE90E0FEFD182 /* Pods-FireTwitter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FireTwitter/FireTwitter.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZLCDRXJTXW;
 				INFOPLIST_FILE = FireTwitter/Info.plist;
@@ -519,6 +525,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.JWiOS.FireTwitter.FireTwitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -529,6 +536,8 @@
 			baseConfigurationReference = 785385113B20C1A04DCC148A /* Pods-FireTwitter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FireTwitter/FireTwitter.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZLCDRXJTXW;
 				INFOPLIST_FILE = FireTwitter/Info.plist;
@@ -539,6 +548,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.JWiOS.FireTwitter.FireTwitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
