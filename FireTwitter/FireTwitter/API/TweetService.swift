@@ -23,7 +23,13 @@ struct TweetService {
             "retweets": 0
         ] as [String : Any]
         
-        REF_TWEETS.childByAutoId().updateChildValues(values, withCompletionBlock: completion)
+        let ref = REF_TWEETS.childByAutoId()
+        
+        ref.updateChildValues(values) { (err, ref) in
+            // update user-tweet structure after tweet upload completes
+            guard let tweetID = ref.key else { return }
+            REF_USER_TWEETS.child(uid).updateChildValues([tweetID: 1], withCompletionBlock: completion)
+        }
     }
     
     func fetchTweets(completion: @escaping([Tweet]) -> Void) {
