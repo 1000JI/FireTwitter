@@ -23,7 +23,13 @@ struct TweetService {
             "retweets": 0
         ] as [String : Any]
         
-        REF_TWEETS.childByAutoId().updateChildValues(values, withCompletionBlock: completion)
+        let ref = REF_TWEETS.childByAutoId()
+        
+        ref.updateChildValues(values) { (err, ref) in
+            // update user-tweet structure after tweet upload completes
+            guard let tweetID = ref.key else { return }
+            REF_USER_TWEETS.child(uid).updateChildValues([tweetID: 1], withCompletionBlock: completion)
+        }
     }
     
     func fetchTweets(completion: @escaping([Tweet]) -> Void) {
@@ -38,6 +44,37 @@ struct TweetService {
                 let tweet = Tweet(user: user, tweetID: tweetID, dictionary: dictionary)
                 tweets.append(tweet)
                 completion(tweets)
+            }
+        }
+    }
+    
+    /*
+     .child(String).observe(event)
+        - 리스너는 이벤트 발생 시점에 데이터베이스에서 지정된 위치에 있는 데이터를 value 속성에 포함하는 FIRDataSnapshot을 수신합니다.
+        - 이 값을 NSDictionary와 같은 적절한 네이티브 유형에 할당할 수 있습니다.
+        - 해당 위치에 데이터가 없으면 value는 nil입니다.
+     
+     .child(String).observeSingleEvent(event)
+        - 변경되지 않을 UI 요소를 초기화할 때처럼, 콜백을 한 번만 호출한 다음 즉시 삭제해야 하는 경우가 있습니다.
+        - observeSingleEventOfType 메서드를 사용하여 이러한 경우를 간편하게 처리할 수 있습니다. 즉 추가된 이벤트 콜백이 한 번 트리거된 후에 다시 트리거되지 않습니다.
+        - 이 방법은 한 번 로드된 후 자주 변경되지 않거나 능동적으로 수신 대기할 필요가 없는 데이터에 유용합니다.
+     */
+    
+    func fetchTweets(forUser user: User, completion: @escaping([Tweet]) -> Void) {
+        var tweets = [Tweet]()
+        REF_USER_TWEETS.child(user.uid).observe(.childAdded) { snapshot in
+            let tweetID = snapshot.key
+            
+            REF_TWEETS.child(tweetID).observeSingleEvent(of: .value) { snapshot in
+                guard let dictionary = snapshot.value as? [String : Any] else { return }
+                guard let uid = dictionary["uid"] as? String else { return }
+                let tweetID = snapshot.key
+                
+                UserService.shared.fetchUser(uid: uid) { user in
+                    let tweet = Tweet(user: user, tweetID: tweetID, dictionary: dictionary)
+                    tweets.append(tweet)
+                    completion(tweets)
+                }
             }
         }
     }
