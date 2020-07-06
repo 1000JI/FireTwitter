@@ -92,6 +92,15 @@ extension FeedController {
     }
 }
 
+// MARK: - UICollectionViewDelegate
+
+extension FeedController {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = TweetController(tweet: tweets[indexPath.item])
+        navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
 // MARK: - UICollectionViewDelegateFlowLayout
 
 extension FeedController: UICollectionViewDelegateFlowLayout {

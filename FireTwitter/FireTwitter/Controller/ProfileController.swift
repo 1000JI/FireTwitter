@@ -110,7 +110,6 @@ extension ProfileController {
         
         headerView.delegate = self
         headerView.user = user
-        
         return headerView
     }
 }
