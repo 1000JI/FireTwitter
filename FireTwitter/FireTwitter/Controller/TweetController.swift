@@ -70,7 +70,7 @@ extension TweetController {
             ofKind: kind,
             withReuseIdentifier: headerIdentifier,
             for: indexPath) as! TweetHeader
-        
+        headerView.tweet = tweet
         return headerView
     }
 }
