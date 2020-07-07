@@ -18,6 +18,7 @@
 		AF5CD83024B4288700AD5874 /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CD82F24B4288700AD5874 /* UploadTweetViewModel.swift */; };
 		AF5CD83224B4954C00AD5874 /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CD83124B4954C00AD5874 /* ActionSheetLauncher.swift */; };
 		AF5CD83424B49B2B00AD5874 /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CD83324B49B2B00AD5874 /* ActionSheetCell.swift */; };
+		AF5CD83624B49F4100AD5874 /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CD83524B49F4100AD5874 /* ActionSheetViewModel.swift */; };
 		AF603F1C24AAD4230040271B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F1B24AAD4230040271B /* AppDelegate.swift */; };
 		AF603F1E24AAD4230040271B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F1D24AAD4230040271B /* SceneDelegate.swift */; };
 		AF603F2024AAD4230040271B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F1F24AAD4230040271B /* ViewController.swift */; };
@@ -62,6 +63,7 @@
 		AF5CD82F24B4288700AD5874 /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
 		AF5CD83124B4954C00AD5874 /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
 		AF5CD83324B49B2B00AD5874 /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetCell.swift; sourceTree = "<group>"; };
+		AF5CD83524B49F4100AD5874 /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
 		AF603F1824AAD4230040271B /* FireTwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireTwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF603F1B24AAD4230040271B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF603F1D24AAD4230040271B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				AF4CFF8D24AD72C100DE2747 /* TweetViewModel.swift */,
 				AF32124524B1029000FD942D /* ProfileHeaderViewModel.swift */,
 				AF5CD82F24B4288700AD5874 /* UploadTweetViewModel.swift */,
+				AF5CD83524B49F4100AD5874 /* ActionSheetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				AF5CD83024B4288700AD5874 /* UploadTweetViewModel.swift in Sources */,
 				AF5CD83224B4954C00AD5874 /* ActionSheetLauncher.swift in Sources */,
 				AF603F4B24AB657D0040271B /* LoginController.swift in Sources */,
+				AF5CD83624B49F4100AD5874 /* ActionSheetViewModel.swift in Sources */,
 				AF89321A24AC481900D3BA2A /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
