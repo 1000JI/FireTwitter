@@ -26,6 +26,24 @@ struct TweetViewModel {
         return formatter.string(from: tweet.timestamp, to: now) ?? "2m"
     }
     
+    var usernameText: String {
+        return "@\(user.username)"
+    }
+    
+    var headerTimestamp: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "h:mm a ・ MM/dd/yyyy"
+        return formatter.string(from: tweet.timestamp)
+    }
+    
+    var retweetAttributedString: NSAttributedString? {
+        return attributedText(withValue: tweet.retweetCount, text: "Retweets")
+    }
+    
+    var likesAttributedString: NSAttributedString? {
+        return attributedText(withValue: tweet.likes, text: "Likes")
+    }
+    
     var userInfoText: NSAttributedString {
         let title = NSMutableAttributedString(string: user.fullname,
                                               attributes: [.font: UIFont.boldSystemFont(ofSize: 14)])
@@ -45,4 +63,36 @@ struct TweetViewModel {
         self.user = tweet.user
     }
     
+    func attributedText(withValue value: Int, text: String) -> NSAttributedString {
+        let attributedTitle = NSMutableAttributedString(string: "\(value)",
+            attributes: [
+                NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)
+        ])
+        
+        attributedTitle.append(NSAttributedString(string: " \(text)",
+                                                  attributes: [
+                                                    NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14),
+                                                    NSAttributedString.Key.foregroundColor: UIColor.lightGray
+        ]))
+        return attributedTitle
+    }
+    
+    func size(whereView view: TweetFontSize, forWidth width: CGFloat) -> CGSize {
+        let measurementLabel = UILabel()
+        measurementLabel.text = tweet.caption
+        switch view {
+        case .feedController: break// measurementLabel.font = .systemFont(ofSize: 14)
+        case .tweetHeaderView: measurementLabel.font = .systemFont(ofSize: 20)
+        }
+        measurementLabel.numberOfLines = 0
+        measurementLabel.lineBreakMode = .byWordWrapping
+        measurementLabel.translatesAutoresizingMaskIntoConstraints = false
+        measurementLabel.widthAnchor.constraint(equalToConstant: width).isActive = true
+        return measurementLabel.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+    }
+}
+
+enum TweetFontSize {
+    case feedController
+    case tweetHeaderView
 }
