@@ -31,8 +31,6 @@ class TweetController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
-        
-        print("DEBUG: Twwet caption is \(tweet.caption)")
     }
     
     // MARK: - Helpers
@@ -81,7 +79,6 @@ extension TweetController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         let viewModel = TweetViewModel(tweet: tweet)
         let captionHeight = viewModel.size(whereView: .tweetHeaderView, forWidth: view.frame.width).height
-        print(captionHeight)
         return CGSize(width: view.frame.width, height: captionHeight + 220)
     }
     
