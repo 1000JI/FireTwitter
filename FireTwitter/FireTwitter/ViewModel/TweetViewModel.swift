@@ -76,4 +76,23 @@ struct TweetViewModel {
         ]))
         return attributedTitle
     }
+    
+    func size(whereView view: TweetFontSize, forWidth width: CGFloat) -> CGSize {
+        let measurementLabel = UILabel()
+        measurementLabel.text = tweet.caption
+        switch view {
+        case .feedController: break// measurementLabel.font = .systemFont(ofSize: 14)
+        case .tweetHeaderView: measurementLabel.font = .systemFont(ofSize: 20)
+        }
+        measurementLabel.numberOfLines = 0
+        measurementLabel.lineBreakMode = .byWordWrapping
+        measurementLabel.translatesAutoresizingMaskIntoConstraints = false
+        measurementLabel.widthAnchor.constraint(equalToConstant: width).isActive = true
+        return measurementLabel.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+    }
+}
+
+enum TweetFontSize {
+    case feedController
+    case tweetHeaderView
 }

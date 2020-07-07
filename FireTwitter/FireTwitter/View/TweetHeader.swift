@@ -142,7 +142,7 @@ class TweetHeader: UICollectionReusableView {
         
         addSubview(captionLabel)
         captionLabel.anchor(top: stack.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor,
-                            paddingTop: 20, paddingLeading: 16, paddingTrailing: 16)
+                            paddingTop: 12, paddingLeading: 16, paddingTrailing: 16)
         
         addSubview(dateLabel)
         dateLabel.anchor(top: captionLabel.bottomAnchor, leading: leadingAnchor,
@@ -153,7 +153,8 @@ class TweetHeader: UICollectionReusableView {
         optionButton.anchor(trailing: trailingAnchor, paddingTrailing: 8)
         
         addSubview(statsView)
-        statsView.anchor(top: dateLabel.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, paddingTop: 20, height: 40)
+        statsView.anchor(top: dateLabel.bottomAnchor, leading: leadingAnchor,
+                         trailing: trailingAnchor, paddingTop: 12, height: 40)
         
         let actionStack = UIStackView(arrangedSubviews: [
             commentButton,

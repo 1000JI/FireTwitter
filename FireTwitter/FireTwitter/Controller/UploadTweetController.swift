@@ -85,6 +85,9 @@ class UploadTweetController: UIViewController {
         let stack = UIStackView(arrangedSubviews: [profileImageView, captionTextView])
         stack.axis = .horizontal
         stack.spacing = 12
+        stack.alignment = .leading
+        // 기본 값이 equals로 되어 있어서 profileImageView와 captionTextView가 높이가 같기 때문에
+        // alignment로 왼쪽 정렬하여 equals 설정을 없애주어 captionTextView가 자유로운 크기를 갖는다.
         
         view.addSubview(stack)
         stack.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor,
