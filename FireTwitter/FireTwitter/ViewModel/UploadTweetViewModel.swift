@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum UploadTweetConfiguartion {
+enum UploadTweetConfiguration {
     case tweet
     case reply(Tweet)
 }
@@ -19,7 +19,7 @@ struct UploadTweetViewModel {
     var shouldShowReplyLabel: Bool
     var replyText: String?
     
-    init(config: UploadTweetConfiguartion) {
+    init(config: UploadTweetConfiguration) {
         switch config {
         case .tweet:
             actionButtonTitle = "Tweet"
