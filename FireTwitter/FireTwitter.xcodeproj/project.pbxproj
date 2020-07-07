@@ -16,6 +16,7 @@
 		AF5A6B6824ACDEE6009AC992 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5A6B6724ACDEE6009AC992 /* Tweet.swift */; };
 		AF5A6B6A24ACE6CD009AC992 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5A6B6924ACE6CD009AC992 /* TweetCell.swift */; };
 		AF5CD83024B4288700AD5874 /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CD82F24B4288700AD5874 /* UploadTweetViewModel.swift */; };
+		AF5CD83224B4954C00AD5874 /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5CD83124B4954C00AD5874 /* ActionSheetLauncher.swift */; };
 		AF603F1C24AAD4230040271B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F1B24AAD4230040271B /* AppDelegate.swift */; };
 		AF603F1E24AAD4230040271B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F1D24AAD4230040271B /* SceneDelegate.swift */; };
 		AF603F2024AAD4230040271B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F1F24AAD4230040271B /* ViewController.swift */; };
@@ -58,6 +59,7 @@
 		AF5A6B6724ACDEE6009AC992 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		AF5A6B6924ACE6CD009AC992 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		AF5CD82F24B4288700AD5874 /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
+		AF5CD83124B4954C00AD5874 /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
 		AF603F1824AAD4230040271B /* FireTwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireTwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF603F1B24AAD4230040271B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF603F1D24AAD4230040271B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				AF603F2F24AAD7600040271B /* Extensions.swift */,
 				AF603F5024AB70710040271B /* Utilities.swift */,
 				AF89321724AC3E9B00D3BA2A /* Constants.swift */,
+				AF5CD83124B4954C00AD5874 /* ActionSheetLauncher.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				AF89321C24AC58E600D3BA2A /* UserService.swift in Sources */,
 				AF603F3024AAD7600040271B /* Extensions.swift in Sources */,
 				AF5CD83024B4288700AD5874 /* UploadTweetViewModel.swift in Sources */,
+				AF5CD83224B4954C00AD5874 /* ActionSheetLauncher.swift in Sources */,
 				AF603F4B24AB657D0040271B /* LoginController.swift in Sources */,
 				AF89321A24AC481900D3BA2A /* AuthService.swift in Sources */,
 			);
