@@ -37,8 +37,6 @@ class MainTabController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        logUserOut()
         view.backgroundColor = .twitterBlue
         authenticateUserAndConfigureUI()
     }
@@ -130,5 +128,13 @@ class MainTabController: UITabBarController {
         return nav
     }
     
-    
+    @objc func handleLogout() {
+        logUserOut()
+        
+        DispatchQueue.main.async {
+            let nav = UINavigationController(rootViewController: LoginController())
+            nav.modalPresentationStyle = .fullScreen
+            self.present(nav, animated: true)
+        }
+    }
 }
