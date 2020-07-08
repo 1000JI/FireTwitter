@@ -36,6 +36,7 @@
 		AF603F5124AB70710040271B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF603F5024AB70710040271B /* Utilities.swift */; };
 		AF83C1B424B565A60066E306 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83C1B324B565A60066E306 /* Notification.swift */; };
 		AF83C1B624B57D660066E306 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83C1B524B57D660066E306 /* NotificationService.swift */; };
+		AF83C1B824B598710066E306 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF83C1B724B598710066E306 /* NotificationCell.swift */; };
 		AF85EEA624AC7C940006EFE7 /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF85EEA524AC7C940006EFE7 /* UploadTweetController.swift */; };
 		AF89321624AC279400D3BA2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF89321524AC279400D3BA2A /* GoogleService-Info.plist */; };
 		AF89321824AC3E9B00D3BA2A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89321724AC3E9B00D3BA2A /* Constants.swift */; };
@@ -85,6 +86,7 @@
 		AF603F5024AB70710040271B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		AF83C1B324B565A60066E306 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		AF83C1B524B57D660066E306 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		AF83C1B724B598710066E306 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		AF85EEA524AC7C940006EFE7 /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
 		AF89321524AC279400D3BA2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AF89321724AC3E9B00D3BA2A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				AF9DFDB724B1C83E007E47C1 /* UserCell.swift */,
 				AFEADCC224B35E1300D9C929 /* TweetHeader.swift */,
 				AF5CD83324B49B2B00AD5874 /* ActionSheetCell.swift */,
+				AF83C1B724B598710066E306 /* NotificationCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				AF5CD83224B4954C00AD5874 /* ActionSheetLauncher.swift in Sources */,
 				AF83C1B424B565A60066E306 /* Notification.swift in Sources */,
 				AF603F4B24AB657D0040271B /* LoginController.swift in Sources */,
+				AF83C1B824B598710066E306 /* NotificationCell.swift in Sources */,
 				AF5CD83624B49F4100AD5874 /* ActionSheetViewModel.swift in Sources */,
 				AF89321A24AC481900D3BA2A /* AuthService.swift in Sources */,
 			);
