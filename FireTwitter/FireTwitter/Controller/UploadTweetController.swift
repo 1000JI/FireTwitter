@@ -117,7 +117,7 @@ class UploadTweetController: UIViewController {
         actionButton.setTitle(viewModel.actionButtonTitle, for: .normal)
         captionTextView.placeholderLabel.text = viewModel.placeholderText
         
-        replyLabel.isHidden = viewModel.shouldShowReplyLabel
+        replyLabel.isHidden = !viewModel.shouldShowReplyLabel
         guard let replyText = viewModel.replyText else { return }
         replyLabel.text = replyText
     }
