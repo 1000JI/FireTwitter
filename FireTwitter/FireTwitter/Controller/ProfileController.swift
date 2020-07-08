@@ -79,10 +79,6 @@ class ProfileController: UICollectionViewController {
     func fetchReplies() {
         TweetService.shared.fetchReplies(forUser: user) { tweets in
             self.replies = tweets
-            
-            self.replies.forEach {
-                print($0.replyingTo)
-            }
         }
     }
     
@@ -180,7 +176,10 @@ extension ProfileController: ProfileHeaderDelegate {
     
     func handleEditProfileFollow(_ header: ProfileHeader) {
         if user.isCurrentUser {
-            print("DEBUG: Self handleEditProfileFollow")
+            let controller = EditProfileController(user: user)
+            let nav = UINavigationController(rootViewController: controller)
+            nav.modalPresentationStyle = .fullScreen
+            present(nav, animated: true)
             return
         }
         
